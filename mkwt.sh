@@ -1,8 +1,7 @@
 src_repo=$(echo $PWD|xargs basename)
 repo_sno_var=$(echo "$src_repo"'_SNO')
-echo $repo_sno_var
 def_branch=$(git symbolic-ref --short HEAD)
-#git pull
+git pull
 dateline=$(date +'%F')
 eval "SNO=\$$repo_sno_var"
 if [[ "$SNO" == "" ]]
